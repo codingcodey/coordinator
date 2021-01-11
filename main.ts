@@ -1,5 +1,13 @@
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    mySprite.x = 80
+    mySprite.y = 60
+})
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    game.splash("x" + Math.round(mySprite.x) + ",y" + Math.round(mySprite.y))
+})
+let mySprite: Sprite = null
 scene.setBackgroundColor(7)
-let mySprite = sprites.create(img`
+mySprite = sprites.create(img`
     . . . . . . f f f f . . . . . . 
     . . . . f f f 2 2 f f f . . . . 
     . . . f f f 2 2 2 2 f f f . . . 
